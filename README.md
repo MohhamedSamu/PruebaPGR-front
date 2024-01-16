@@ -4,10 +4,10 @@ El proyecto surge con la finalidad de evaluar las habilidades técnicas del cand
 ## Conocimientos requeridos
 - C#
 - TypeScript
-- 
+
 ## Herramientas de desarrollo sugeridas
 
- - [Angular CLI](https://github.com/angular/angular-cli) versión 13.3.8
+ - [Angular CLI](https://github.com/angular/angular-cli) versión 14.2.
  - [Node](https://nodejs.org/es/) versión 16.16.0
  - [Visual Studio Code](https://code.visualstudio.com/download)
  - [Kuber](https://themeforest.net/item/kuber-angular-13-material-design-admin-template/35858437)
