@@ -19,7 +19,6 @@ export class EjemploService extends UnsubscribeOnDestroyAdapter{
   }
 
   getEjemplo(): Promise<any> {
-    // http://localhost:5041/api/ejemplo/index
     let url = 'https://localhost:7116/api/ejemplo/index';
     return firstValueFrom(this.http.get(url));
   }
