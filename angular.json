@@ -39,7 +39,12 @@
             "styles": [
               "src/assets/scss/style.scss",
               "src/assets/scss/theme/all-themes.scss",
-              "src/styles.scss"
+              "src/styles.scss",
+
+
+              "node_modules/primeicons/primeicons.css",
+              "node_modules/primeng/resources/themes/bootstrap4-dark-blue/theme.css",
+              "node_modules/primeng/resources/primeng.min.css"
             ],
             "scripts": [
               "./node_modules/moment/min/moment.min.js",

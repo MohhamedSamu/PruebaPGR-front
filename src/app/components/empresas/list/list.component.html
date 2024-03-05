@@ -1,0 +1,65 @@
+<section class="content">
+    <div class="content-block">
+        <div class="block-header">
+            <br>
+            <br>
+        </div>
+        <div class="row">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                <div class="card">
+                    <div class="header" style="display: flex; align-items: center; justify-content: space-between;">
+                        <h1 style="font-size: 1.25em;">Empresas</h1>
+                        <button pButton class="p-button-raised" routerLink="/empresas/new">Nueva empresa</button>
+                    </div>
+                    <div class="body">
+                        <p-table #dt [value]="empresas" [rows]="5" [paginator]="true"
+                            [globalFilterFields]="['nombre','telefono','direccion']"
+                            [tableStyle]="{'min-width': '75rem'}" [rowHover]="true"
+                            dataKey="id" currentPageReportTemplate="Mostrando desde {first} hasta {last} de {totalRecords} empresas"
+                            [showCurrentPageReport]="true">
+                            <ng-template pTemplate="caption">
+                                <div class="flex align-items-center justify-content-between">
+                                    <span class="p-input-icon-left">
+                                        <i class="pi pi-search"></i>
+                                        <input pInputText type="text"
+                                            (input)="dt.filterGlobal($event.target.value, 'contains')"
+                                            placeholder="Search..." />
+                                    </span>
+                                </div>
+                            </ng-template>
+                            <ng-template pTemplate="header">
+                                <tr>
+                                    <th pSortableColumn="nombre" style="min-width:15rem">nombre <p-sortIcon field="nombre"></p-sortIcon></th>
+                                    <th pSortableColumn="telefono" style="min-width:15rem">telefono <p-sortIcon field="telefono"></p-sortIcon></th>
+                                    <th pSortableColumn="direccion" style="min-width:15rem">direccion <p-sortIcon field="direccion"></p-sortIcon></th>
+                                    <th></th>
+                                </tr>
+                            </ng-template>
+                            <ng-template pTemplate="body" let-empresa>
+                                <tr>
+                                    <td>{{empresa.nombre}}</td>
+                                    <td>{{empresa.telefono}}</td>
+                                    <td>{{empresa.direccion}}</td>
+                                    <td>
+                                        <button pButton pRipple icon="pi pi-pencil"
+                                            class="p-button-rounded p-button-success mr-2"
+                                            (click)="editEmpresa(empresa)"></button>
+                                        <button pButton pRipple icon="pi pi-trash"
+                                            class="p-button-rounded p-button-warning"
+                                            (click)="deleteEmpresa(empresa)"></button>
+                                    </td>
+                                </tr>
+                            </ng-template>
+                            <ng-template pTemplate="summary">
+                                <div class="flex align-items-center justify-content-between">
+                                    En total hay {{empresas ? empresas.length : 0 }} empresas.
+                                </div>
+                            </ng-template>
+                        </p-table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<p-toast></p-toast>

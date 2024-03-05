@@ -18,6 +18,16 @@ const routes: Routes = [
           import("./forms/forms.module").then((m) => m.FormModule),
       },
       {
+        path: "empresas",
+        loadChildren: () =>
+          import("./components/empresas/empresas.module").then((m) => m.EmpresasModule),
+      },
+      {
+        path: "empleados",
+        loadChildren: () =>
+          import("./components/empleados/empleados.module").then((m) => m.EmpleadosModule),
+      },
+      {
         path: "tables",
         loadChildren: () =>
           import("./tables/tables.module").then((m) => m.TablesModule),

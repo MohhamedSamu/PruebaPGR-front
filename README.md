@@ -1,30 +1,6 @@
-# PRUEBAFRONTEND
-El proyecto surge con la finalidad de evaluar las habilidades técnicas del candidato en cuanto al uso de Angular
+Unicamente pude hacer la lista de empresas y eliminar empresas, parte del UI de new empresa y la lista de empleados, pero tuve problemas con el backend donde tome mucho tiempo y no 
+logre solventar nada, :(
 
-## Conocimientos requeridos
-- C#
-- TypeScript
+para iniciar el proj usar:
 
-## Herramientas de desarrollo sugeridas
-
- - [Angular CLI](https://github.com/angular/angular-cli) versión 14.2.13
- - [Angular](https://angular.io/) versión 13.3.9
- - [Node](https://nodejs.org/es/) versión 16.16.0
- - [Primeng](https://primeng.org/) versión 13.4.1
- - [Visual Studio Code](https://code.visualstudio.com/download)
- - [Kuber](https://themeforest.net/item/kuber-angular-13-material-design-admin-template/35858437)
-
-## Ruta de desarrollo establecida
-Clonar este repositorio `git clone https://github.com/Sistemas-PGR/PRUEBAFRONTEND.git`
-para inicializar las librerías se usa el comando `npm install --legacy-peer-deps` o `npm install --force`, para su ejecución se usa el comando  `ng serve`.
-Con fines de desarrollo se determinó trabajar sobre la siguiente ruta `http://localhost:4200/` 
-
-## Punto a evaluar
--Creación de CRUD(Create, Read, Update and Delete) siguientes tablas: Persona, Empresa, PersonaEmpresa
--Backend a usar `https://github.com/Sistemas-PGR/PRUEBABACKEND.git`
-
-Puede apoyarse en la conexión de ejemplo backend y frontend.
-
-
-
-
+npm run start

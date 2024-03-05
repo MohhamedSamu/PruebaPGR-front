@@ -1,0 +1,36 @@
+<section class="content">
+    <div class="content-block">
+        <div class="block-header">
+            <br>
+            <br>
+        </div>
+        <div class="row">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                <div class="card">
+                    <div class="header" style="display: flex; align-items: center; justify-content: space-between;">
+                        <h1 style="font-size: 1.25em;">Nueva empresa</h1>
+                        <button pButton class="p-button-raised" routerLink="/empresas/list">Regresar</button>
+                    </div>
+                    <div class="body">
+                        <div class="row">
+                            <span class="p-float-label col-md-6">
+                                <input id="Nombre-input" type="text" pInputText style="width:100%;" [(ngModel)]="empresa.Nombre"> 
+                                <label for="Nombre-input" style="left: 20px;">Nombre</label>
+                            </span>
+                            <span class="p-float-label col-md-6">
+                                <input id="Telefono-input" type="text" pInputText style="width:100%;" [(ngModel)]="empresa.Telefono">  
+                                <label for="Telefono-input" style="left: 20px;">Telefono</label>
+                            </span>
+                            <span class="p-float-label col-md-12">
+                                <input id="Direccion-input" type="text" pInputText style="width:100%;" [(ngModel)]="empresa.Direccion">  
+                                <label for="Direccion-input" style="left: 20px;">Direccion</label>
+                            </span>
+                        </div>
+                        <button pButton class="p-button-raised pull-right p-button-success" (click)="ingresarEmpresa()">Ingresar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<p-toast></p-toast>
